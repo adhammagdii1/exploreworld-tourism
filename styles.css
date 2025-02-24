@@ -28,6 +28,7 @@ header .logo h1 {
   color: #18bc9c; /* Turquoise */
 }
 
+/* Navbar Styles */
 nav ul {
   list-style: none;
   margin: 0;
@@ -50,6 +51,22 @@ nav ul li a:hover {
   color: #18bc9c; /* Turquoise */
 }
 
+/* Hamburger Menu Icon */
+.menu-icon {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hero Section */
 .hero {
   background: rgba(44, 62, 80, 0.7) url('https://via.placeholder.com/1500') no-repeat center center/cover;
   color: #fff;
@@ -86,6 +103,7 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
+/* Destinations, Services, About, Contact Sections */
 .destinations, .services, .about, .contact {
   padding: 80px 20px;
   text-align: center;
@@ -139,6 +157,7 @@ nav ul li a:hover {
   line-height: 1.6;
 }
 
+/* Contact Form */
 .contact form {
   max-width: 600px;
   margin: 0 auto;
@@ -173,6 +192,7 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
+/* Footer */
 footer {
   background: #2c3e50; /* Dark blue-gray */
   color: #fff;
@@ -253,12 +273,18 @@ footer {
   }
 
   nav ul {
+    display: none; /* Hide nav links by default on mobile */
     flex-direction: column;
-    margin-top: 10px;
+    width: 100%;
+    text-align: center;
   }
 
-  nav ul li {
-    margin: 10px 0;
+  nav ul.active {
+    display: flex; /* Show nav links when active */
+  }
+
+  .menu-icon {
+    display: flex; /* Show hamburger menu icon */
   }
 
   .hero {
