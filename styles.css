@@ -300,13 +300,15 @@ footer {
   }
 
   .destination-grid, .service-grid {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row; /* Align cards horizontally */
+    justify-content: flex-start; /* Align to the left */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 10px; /* Reduce gap for smaller screens */
   }
 
   .destination-card, .service-card {
-    width: 80%;
-    margin: 10px 0;
+    width: 45%; /* Adjust width for mobile */
+    min-width: 200px; /* Minimum width to prevent squeezing */
   }
 
   .contact form {
